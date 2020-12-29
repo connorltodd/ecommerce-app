@@ -6,7 +6,12 @@ function CartContextProvider(props) {
   const [cartProducts, setCartProducts] = React.useState([]);
 
   const addToCart = (productToAdd) => {
-    setCartProducts([...cartProducts, productToAdd]);
+    if (!cartProducts.some((element) => element.title === productToAdd.title)) {
+      setCartProducts([...cartProducts, productToAdd]);
+      alert(`${productToAdd.title} was added to cart successfully`);
+    } else {
+      alert(`${productToAdd.title} is already in the cart`);
+    }
   };
 
   const removeFromCart = (productToRemove) => {

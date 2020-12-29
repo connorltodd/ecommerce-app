@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import CartList from "./components/CartList";
 import CartContextProvider from "./contexts/CartContext";
@@ -9,8 +10,7 @@ function App() {
     <div className="App">
       <CartContextProvider>
         <BrowserRouter>
-          <Link to="/cart">Cart</Link>
-          <Link to="/">Product List</Link>
+          <Navbar />
           <Switch>
             <Route exact path="/" component={ProductList} />
             <Route path="/cart" component={CartList} />

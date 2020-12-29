@@ -26,18 +26,26 @@ class ProductList extends React.Component {
     return (
       <div>
         <input
-          placeholder="Search for a product"
+          className="form-control mt-4 mb-4"
+          placeholder="Search for a product..."
           onChange={this.searchProductHandler}
+          style={{ maxWidth: "400px", margin: "auto" }}
         />
-        {this.state.products
-          .filter((product) =>
-            product.title
-              .toLowerCase()
-              .includes(this.state.productSearchValue.toLowerCase())
-          )
-          .map((product) => (
-            <Product {...product} addProductToCart />
-          ))}
+        <div className="container mb-4">
+          <div className="row">
+            {this.state.products
+              .filter((product) =>
+                product.title
+                  .toLowerCase()
+                  .includes(this.state.productSearchValue.toLowerCase())
+              )
+              .map((product) => (
+                <div class="col-md- col-lg-4 col-sm-6">
+                  <Product {...product} addProductToCart />
+                </div>
+              ))}
+          </div>
+        </div>
       </div>
     );
   }
