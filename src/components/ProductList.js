@@ -40,7 +40,7 @@ class ProductList extends React.Component {
                   .includes(this.state.productSearchValue.toLowerCase())
               )
               .map((product) => (
-                <div class="col-md- col-lg-4 col-sm-6">
+                <div className="col-md- col-lg-4 col-sm-6" key={product.id}>
                   <Product {...product} addProductToCart />
                 </div>
               ))}

@@ -5,22 +5,26 @@ import Cart from "../images/cart.png";
 
 function Navbar() {
   return (
-    <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-light bg-light">
-      <div class="container-fluid" style={{ justifyContent: "center" }}>
+    <nav className="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-light bg-light">
+      <div className="container-fluid" style={{ justifyContent: "center" }}>
         <div id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item" style={{ marginRight: "50px" }}>
+          <ul className="navbar-nav">
+            <li className="nav-item" style={{ marginRight: "50px" }}>
               <img
                 src={Shop}
                 height="50"
                 width="50"
                 style={{ display: "inline-block" }}
               />
-              <Link class="nav-link" to="/" style={{ display: "inline-block" }}>
+              <Link
+                className="nav-link"
+                to="/"
+                style={{ display: "inline-block" }}
+              >
                 Products
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <img
                 src={Cart}
                 height="50"
@@ -28,7 +32,7 @@ function Navbar() {
                 style={{ display: "inline-block" }}
               />
               <Link
-                class="nav-link"
+                className="nav-link"
                 to="/cart"
                 style={{ display: "inline-block" }}
               >

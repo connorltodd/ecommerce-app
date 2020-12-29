@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import CartList from "./components/CartList";

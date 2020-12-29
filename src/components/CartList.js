@@ -10,7 +10,10 @@ function CartList(props) {
       {cartProducts.length ? (
         <>
           {cartProducts.map((cartProduct) => (
-            <div style={{ maxWidth: "400px", margin: "auto" }}>
+            <div
+              style={{ maxWidth: "400px", margin: "auto" }}
+              key={cartProduct.id}
+            >
               <Product {...cartProduct} removeProductFromCart />
             </div>
           ))}
