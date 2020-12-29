@@ -24,15 +24,11 @@ function CartContextProvider(props) {
     setCartProducts(
       cartProducts.filter((product) => product.id !== productToRemove.id)
     );
-    let currentCartProducts = JSON.parse(
-      window.localStorage.getItem("cartProducts")
-    );
-    currentCartProducts = cartProducts.filter(
-      (product) => product.id !== productToRemove.id
-    );
-    currentCartProducts = window.localStorage.setItem(
+    window.localStorage.setItem(
       "cartProducts",
-      JSON.stringify(currentCartProducts)
+      JSON.stringify(
+        cartProducts.filter((product) => product.id !== productToRemove.id)
+      )
     );
   };
 

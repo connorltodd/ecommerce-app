@@ -15,6 +15,7 @@ function Navbar() {
                 height="50"
                 width="50"
                 style={{ display: "inline-block" }}
+                alt="shop icon"
               />
               <Link
                 className="nav-link"
@@ -30,6 +31,7 @@ function Navbar() {
                 height="50"
                 width="50"
                 style={{ display: "inline-block" }}
+                alt="cart icon"
               />
               <Link
                 className="nav-link"
