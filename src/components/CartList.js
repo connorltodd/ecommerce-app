@@ -3,7 +3,7 @@ import { CartContext } from "../contexts/CartContext";
 import Product from "./Product";
 
 function CartList(props) {
-  const { cartProducts } = React.useContext(CartContext);
+  const { cartProducts, confirmOrder } = React.useContext(CartContext);
   return (
     <div>
       <h1 className="text-center mb-3 mt-3">Cart List</h1>
@@ -29,7 +29,14 @@ function CartList(props) {
                 .reduce((acc, element) => acc + element.price, 0)
                 .toFixed(2)}
             </p>
-            <button className="btn btn-success ">Checkout</button>
+            <button
+              className="btn btn-success"
+              onClick={() => {
+                confirmOrder();
+              }}
+            >
+              Checkout
+            </button>
           </div>
         </>
       ) : (
